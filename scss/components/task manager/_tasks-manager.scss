@@ -12,7 +12,15 @@
     overflow: hidden;
     background-color: $color-light;
     @include shadow (2px, 2px, 3px, 0, rgba(0,0,0,0.3));
-    padding: 0 0 1.8rem 0;
+    position: relative;
+    padding: 0 0 0.8rem 0;
+    &:nth-of-type(1) {
+        border-bottom: 10px solid nth($colors-header, 1);
+    } &:nth-of-type(2) {
+        border-bottom: 10px solid nth($colors-header, 2);
+    } &:nth-of-type(3) {
+        border-bottom: 10px solid nth($colors-header, 3);
+    }
 
     ul {
         height: 85%;
