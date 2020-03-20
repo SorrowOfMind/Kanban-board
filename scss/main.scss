@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Noto+Sans:400,700&display=swap');
+
+@import './utils/reset';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/general';
+
+@import './components/main\ list/main-list';
+@import './components/task\ manager/tasks-manager';
+
+
+@media screen and (min-width: 1024px) {
+    @import './components/task\ manager/task-manager_lg';
+}

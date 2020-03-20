@@ -1,0 +1,35 @@
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    @include flexbox(row, center, center);
+    height: 100vh;
+    background: url('../imgs/color.png') no-repeat center/cover;
+}
+
+.container {
+    width: 80vw;
+    min-width: 380px;
+    height: 85vh;
+    position: relative;
+    background-color: #525c63;
+    @include flexbox (row,center,center);
+    border-radius: $radius - 4px;
+    overflow: hidden;
+}
+
+[draggable] {
+    -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}

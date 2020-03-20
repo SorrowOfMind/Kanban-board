@@ -1,0 +1,69 @@
+.tasks-manager {
+    @include flexbox (column,space-evenly,center);
+    width: 78%;
+    height: 100%;
+    min-width: 230px;
+}
+
+.list {
+    width: 95%;
+    height: 31%;
+    border-radius: $radius;
+    overflow: hidden;
+    background-color: $color-light;
+    @include shadow (2px, 2px, 3px, 0, rgba(0,0,0,0.3));
+    padding: 0 0 1.8rem 0;
+
+    ul {
+        height: 85%;
+        overflow-y: auto;
+    }
+
+    .list-todo > li{
+        background-color: nth($colors-items, 1);
+        &:after, &:before {
+            background-color: nth($colors-header, 1);
+        }
+    }
+
+    .list-inprogress > li {
+        background-color: nth($colors-items, 2);
+        &:after, &:before {
+            background-color: nth($colors-header, 2);
+        }
+    }
+
+    .list-done > li {
+        background-color: nth($colors-items, 3);
+        &:after, &:before {
+            background-color: nth($colors-header, 3);
+        }
+    }
+    
+    .header {
+        height: 19%;
+        font-family: 'Indie Flower', cursive;
+        padding: 0.5rem 1rem;
+        @include fluid-size(380px, 1200px, $font-headings-min, $font-headings-max);
+        @include flexbox(row, flex-start, center);
+    }
+    
+    .header_red {
+        background-color: nth($colors-header, 1);
+    }
+
+    .header_orange {
+        background-color: nth($colors-header, 2);
+    }
+
+    .header_blue {
+        background-color: nth($colors-header, 3);
+    }
+}
+
+
+
+
+
+
+

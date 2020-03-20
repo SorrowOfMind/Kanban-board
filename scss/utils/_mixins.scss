@@ -1,0 +1,26 @@
+@mixin flexbox ($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin shadow ($x,$y,$blur,$offset,$color) {
+    box-shadow: $x $y $blur $offset $color;
+    -webkit-box-shadow: $x $y $blur $offset $color;
+    -moz-box-shadow: $x $y $blur $offset $color;
+}
+
+@mixin shadow-inset($x,$y,$blur,$offset,$color) {
+    box-shadow: inset $x $y $blur $offset $color;
+    -webkit-box-shadow: inset $x $y $blur $offset $color;
+    -moz-box-shadow: inset $x $y $blur $offset $color;
+}
+
+@function strip-unit($val) {
+    @return $val/($val * 0 + 1);
+}
+
+@mixin fluid-size($minVw, $maxVw, $minSize, $maxSize) {
+    font-size: calc(#{$minSize} + #{strip-unit($maxSize - $minSize)} * ((100vw - #{$minVw}) / #{strip-unit($maxVw - $minVw)}));
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./scr/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/487ee9d2da.js" crossorigin="anonymous"></script>
+    <script src="./scr/DragDropTouch.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="list-main">
+                <div class="info"><i class="fas fa-sync refresh" id='refresh-icon'></i>
+                    <span class="tooltiptext" id="tooltip">Refresh the board</span>
+                    <h2 class="title">List</h2>
+                </div>
+                <ul class="tasks-board"></ul>
+                <input type="text" placeholder="Add task and press enter..." id="user-input">
+            </div>
+            <div class="tasks-manager">
+                <div class="list">
+                    <div class="header header_red">to do</div>
+                    <ul class="list-todo"></ul>
+                </div>
+                <div class="list">
+                    <div class="header header_orange">in progress</div>
+                    <ul class="list-inprogress"></ul>
+                </div>
+                <div class="list">
+                    <div class="header header_blue">done!</div>
+                    <ul class="list-done"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.tasks-manager {
+    @include flexbox (row,space-evenly,center);
+}
+
+.list {
+    width: 30%;
+    height: 95%;
+    .header {
+        justify-content: center;
+        height: 15%;
+    }
+}
